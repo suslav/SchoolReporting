@@ -73,11 +73,11 @@ class Elements extends Component
                      $arrayOfLinks += array(                   
                     
 //                    ,                   
-//                    "Students" => array(
-//                        'controller'=>'Students',
-//                        'caption' => 'Students',
-//                        'action' => 'AddStudent'
-//                    )
+                    "Accounts" => array(
+                        'controller'=>'Accounts',
+                        'caption' => 'Accounts',
+                        'action' => 'GetUserAccounts'
+                    )
                 );
             }
         }

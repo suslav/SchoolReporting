@@ -99,42 +99,7 @@ class SecurityPlugin extends Plugin
 
             //End Pulic Resource Adding -------------------------------------------------------------------------
 
-
-           //lect
-
-              $LecResources = array(
-//               'firm'  => array('oclient'),
-//               'clients'  => array('registerclient','clientslist'),
-//               'documents'  => array('uploaddocs','treedocs','basicsearch','advancedsearch','registerclient'),
-//               'cases'  => array('uploaddocs','registercases','caselist','casesreplies'),
-//               'tasks'  => array('addtasks','viewtasks'),
-//               'adderbook'  => array('addaddress','selectuser'),
-//               'settings'  => array('managecategory','eventreminds','notices','profile','changepass'),
-//               'dashboard' => array('dashboard')
-
-           );
-
-
-
-           //Adding Lecturer  Resources
-
-           foreach ($LecResources as $resource => $actions)
-           {
-               $acl->addResource(new Resource($resource), $actions);
-           }
-
-
-
-        //    Grant access to private area to role User
-            foreach ($LecResources as $resource => $actions) {
-                foreach ($actions as $action){
-                   $acl->allow('Lecturer', $resource, $action);
-                }
-            }
-
-
-           //End  Lecturer  Resource  -----------------------------------------------------------------------------------------
-
+ 
 
 
 
@@ -199,7 +164,7 @@ class SecurityPlugin extends Plugin
            //End  Admin  Resource  -----------------------------------------------------------------------------------------
 
              $userResources = array(
-               //'users'  => array('ChangePassword'),             
+              'Accounts'  => array('GetUserAccounts'),             
            );
 
 
