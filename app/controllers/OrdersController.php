@@ -1,23 +1,23 @@
 <?php
 use Phalcon\Mvc\Model\Criteria;
 use Phalcon\Paginator\Adapter\Model as Paginator;
-class AccountsController extends ControllerBase
+class OrdersController extends ControllerBase
 {
 
     public function indexAction()
     {
 
     }
-    public function GetUserAccountsAction()
+    public function GetUserOrdersAction()
     {           
         
         $auth = $this->session->get('auth');
         $UserID = $auth['id'];
         
         $numberPage = $this->request->getQuery("page", "int");       
-        $depart = accounts::find("UserID=$UserID");
+        $depart = orders::find("UserID=$UserID");
         if (count($depart) == 0) {
-            $this->flash->notice("There are no Courses");
+            $this->flash->notice("There are no Orders");
         }
         $paginator = new Paginator(array(
             "data"  => $depart,

@@ -24,6 +24,8 @@ class users extends \Phalcon\Mvc\Model
         $this->belongsTo('UserTypeID', 'usertypes', 'UserTypeID', array('alias' => 'usertypes'));   
         
         $this->hasMany('UserID', 'accounts', 'UserID', array('alias' => 'accounts'));
+        $this->hasMany('UserID', 'orders', 'UserID', array('alias' => 'orders'));
+        $this->hasMany('UserID', 'events', 'UserID', array('alias' => 'events'));
        
     }
     

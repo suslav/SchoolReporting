@@ -119,37 +119,38 @@ class UsersController  extends  ControllerBase
 //        $this->flash->success("User was deleted");        
 //    }
     
-//   public function ChangePasswordAction()
-//    {
-//
-//         
-//        $auth = $this->session->get('auth');
-//        $user_id = $auth['id'];
-//
-//        if($user_id != null) {
-//            if ($this->request->isPost()) {
-//
-//                $product = users::findFirst("UserId ='$user_id'");
-//                if (!$product) {
-//                    $this->flash->error("User Not Found");                   
-//                }
-//                else
-//                {
-//                    $NewPassword = $this->request->getPost('NewPassword');
-//                    $product->Password = sha1($NewPassword);
-//                    if ($product->save() == false) {
+   public function ChangePasswordAction()
+    {
+        $auth = $this->session->get('auth');
+        $user_id = $auth['id'];
+
+        if($user_id != null) {
+            if ($this->request->isPost()) {
+
+                $product = users::findFirst("UserID ='$user_id'");
+                if (!$product) {
+                    $this->flash->error("User Not Found");                   
+                }
+                else
+                {
+                    $NewPassword = $this->request->getPost('NewPassword');
+                    $product->Password = sha1($NewPassword);
+                    if ($product->save() == false) {
 //                        foreach ($product->getMessages() as $message) {
 //                            $this->flash->error((string) $message);
 //                        }
-//                    } else {
-//                        $this->flash->success('Your Password was updated successfully');
-//                    }
-//                }
-//            }
-//        }
-//        else{
-//            return $this->forward('index/index');
-//        }
-//        
-//    }
+                        
+                        $this->flash->error('Error!');
+                    } else {
+                        $this->flash->success('Your Password was updated successfully');
+                    }
+                }
+            }
+        }
+        else{
+            return $this->forward('index/index');
+        }
+        
+    }
+      
 }

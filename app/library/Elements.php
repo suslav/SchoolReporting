@@ -57,11 +57,11 @@ class Elements extends Component
 
                 $arrayOfLinks += array(                 
 //                    ,
-//                     "Add User" => array(
-//                        'controller'=>'users',
-//                        'caption' => 'Add User',
-//                        'action' => 'loginuser'
-//                    )
+                     "users" => array(
+                        'controller'=>'users',
+                        'caption' => 'ChangePassword',
+                        'action' => 'ChangePassword'
+                    )
 
                 );
 
@@ -77,6 +77,21 @@ class Elements extends Component
                         'controller'=>'Accounts',
                         'caption' => 'Accounts',
                         'action' => 'GetUserAccounts'
+                    ),
+                         "Events" => array(
+                        'controller'=>'Events',
+                        'caption' => 'Events',
+                        'action' => 'GetUserEvents'
+                    ),
+                        "Orders" => array(
+                        'controller'=>'Orders',
+                        'caption' => 'Orders',
+                        'action' => 'GetUserOrders'
+                    ),
+                       "users" => array(
+                        'controller'=>'users',
+                        'caption' => 'ChangePassword',
+                        'action' => 'ChangePassword'
                     )
                 );
             }
