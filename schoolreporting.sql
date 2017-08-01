@@ -48,6 +48,63 @@ INSERT INTO `accounts` VALUES (1,'2017-07-31',1,'particulars1',12,13,'2017-07-31
 UNLOCK TABLES;
 
 --
+-- Table structure for table `events`
+--
+
+DROP TABLE IF EXISTS `events`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `events` (
+  `EventID` int(11) NOT NULL AUTO_INCREMENT,
+  `Date` date DEFAULT NULL,
+  `Particulars` varchar(100) DEFAULT NULL,
+  `Representative` varchar(100) DEFAULT NULL,
+  `Remarks` varchar(200) DEFAULT NULL,
+  `Status` varchar(45) DEFAULT NULL,
+  `UserID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`EventID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `events`
+--
+
+LOCK TABLES `events` WRITE;
+/*!40000 ALTER TABLE `events` DISABLE KEYS */;
+INSERT INTO `events` VALUES (1,'2017-08-01','Particulars1','Representative4','Remarks1','Status1',2),(2,'2017-08-01','Particulars2','Representative3','Remarks2','Status2',3),(3,'2017-08-01','Particulars3','Representative2','Remarks3','Status3',2),(4,'2017-08-01','Particulars4','Representative1','Remarks4','Status4',3);
+/*!40000 ALTER TABLE `events` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `orders` (
+  `OrderID` int(11) NOT NULL AUTO_INCREMENT,
+  `ProductName` varchar(100) DEFAULT NULL,
+  `OrderedQnty` int(11) DEFAULT NULL,
+  `DeliveredQnty` int(11) DEFAULT NULL,
+  `BalanceQuantity` int(11) DEFAULT NULL,
+  `UserID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`OrderID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES (1,'ProductName1',5,3,2,2),(2,'ProductName2',5,2,3,2),(3,'ProductName3',5,4,1,3),(4,'ProductName4',5,1,4,3);
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -120,4 +177,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-07-31 18:05:48
+-- Dump completed on 2017-08-01 17:30:52
