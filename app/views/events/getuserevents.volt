@@ -46,10 +46,10 @@
             <tr>
                 <td colspan="6" align="right">
                     <div class="btn-group">
-                        {{ link_to("Events/GetUserEvents", '<i class="icon-fast-backward"></i> First', "class": "btn") }}
-                        {{ link_to("Events/GetUserEvents?page=" ~ page.before, '<i class="icon-step-backward"></i> Previous', "class": "btn") }}
-                        {{ link_to("Events/GetUserEvents?page=" ~ page.next, '<i class="icon-step-forward"></i> Next', "class": "btn") }}
-                        {{ link_to("Events/GetUserEvents?page=" ~ page.last, '<i class="icon-fast-forward"></i> Last', "class": "btn") }}
+                        {{ link_to("events/getuserevents", '<i class="icon-fast-backward"></i> First', "class": "btn") }}
+                        {{ link_to("events/getuserevents?page=" ~ page.before, '<i class="icon-step-backward"></i> Previous', "class": "btn") }}
+                        {{ link_to("events/getuserevents?page=" ~ page.next, '<i class="icon-step-forward"></i> Next', "class": "btn") }}
+                        {{ link_to("events/getuserevents?page=" ~ page.last, '<i class="icon-fast-forward"></i> Last', "class": "btn") }}
                         <span class="help-inline">{{ page.current }} of {{ page.total_pages }}</span>
                     </div>
                 </td>

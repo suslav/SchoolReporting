@@ -15,7 +15,7 @@
                         <div class="panel panel-primary">
                         <div class="panel-heading">Change Password</div>
                         <div class="panel-body">
-                            {{ form('users/ChangePassword', 'id': 'ChangePasswordForm', 'onbeforesubmit': 'return false') }}
+                            {{ form('users/changepassword', 'id': 'ChangePasswordForm', 'onbeforesubmit': 'return false') }}
                                     <div class="clearfix">
                                         <label for="NewPassword">NewPassword</label>
                                         <div class="input">

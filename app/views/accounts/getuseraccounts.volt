@@ -52,10 +52,10 @@
             <tr>
                 <td colspan="7" align="right">
                     <div class="btn-group">
-                        {{ link_to("Accounts/GetUserAccounts", '<i class="icon-fast-backward"></i> First', "class": "btn") }}
-                        {{ link_to("Accounts/GetUserAccounts?page=" ~ page.before, '<i class="icon-step-backward"></i> Previous', "class": "btn") }}
-                        {{ link_to("Accounts/GetUserAccounts?page=" ~ page.next, '<i class="icon-step-forward"></i> Next', "class": "btn") }}
-                        {{ link_to("Accounts/GetUserAccounts?page=" ~ page.last, '<i class="icon-fast-forward"></i> Last', "class": "btn") }}
+                        {{ link_to("accounts/getuseraccounts", '<i class="icon-fast-backward"></i> First', "class": "btn") }}
+                        {{ link_to("accounts/getuseraccounts?page=" ~ page.before, '<i class="icon-step-backward"></i> Previous', "class": "btn") }}
+                        {{ link_to("accounts/getuseraccounts?page=" ~ page.next, '<i class="icon-step-forward"></i> Next', "class": "btn") }}
+                        {{ link_to("accounts/getuseraccounts?page=" ~ page.last, '<i class="icon-fast-forward"></i> Last', "class": "btn") }}
                         <span class="help-inline">{{ page.current }} of {{ page.total_pages }}</span>
                     </div>
                 </td>
