@@ -8,7 +8,7 @@ class OrdersController extends ControllerBase
     {
 
     }
-    public function GetUserOrdersAction()
+    public function getuserordersAction()
     {           
         
         $auth = $this->session->get('auth');

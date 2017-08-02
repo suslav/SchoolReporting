@@ -8,7 +8,7 @@ class EventsController extends ControllerBase
     {
 
     }
-    public function GetUserEventsAction()
+    public function getusereventsAction()
     {           
         
         $auth = $this->session->get('auth');

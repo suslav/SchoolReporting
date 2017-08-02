@@ -112,7 +112,7 @@ class SecurityPlugin extends Plugin
 
 
            $adminResources = array(
-               'users'  => array('ChangePassword')              
+               'users'  => array('changepassword')              
            );
 
 
@@ -164,10 +164,10 @@ class SecurityPlugin extends Plugin
            //End  Admin  Resource  -----------------------------------------------------------------------------------------
 
              $userResources = array(
-              'Accounts'  => array('GetUserAccounts'),  
-              'users'  => array('ChangePassword'),       
-              'Events'  => array('GetUserEvents'), 
-              'Orders'  => array('GetUserOrders'), 
+              'accounts'  => array('getuseraccounts'),  
+              'users'  => array('changepassword'),       
+              'events'  => array('getuserevents'), 
+              'orders'  => array('getuserorders'), 
            );
 
 

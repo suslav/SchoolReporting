@@ -119,7 +119,7 @@ class UsersController  extends  ControllerBase
 //        $this->flash->success("User was deleted");        
 //    }
     
-   public function ChangePasswordAction()
+   public function changepasswordAction()
     {
         $auth = $this->session->get('auth');
         $user_id = $auth['id'];

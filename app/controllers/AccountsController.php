@@ -8,7 +8,7 @@ class AccountsController extends ControllerBase
     {
 
     }
-    public function GetUserAccountsAction()
+    public function getuseraccountsAction()
     {           
         
         $auth = $this->session->get('auth');

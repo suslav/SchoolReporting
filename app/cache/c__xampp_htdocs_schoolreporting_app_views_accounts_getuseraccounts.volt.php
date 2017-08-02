@@ -18,8 +18,8 @@
 
   <div class="row">
     <div class="col-md-12">
-    <?php $v22108181761iterated = false; ?><?php $v22108181761iterator = $page->items; $v22108181761incr = 0; $v22108181761loop = new stdClass(); $v22108181761loop->self = &$v22108181761loop; $v22108181761loop->length = count($v22108181761iterator); $v22108181761loop->index = 1; $v22108181761loop->index0 = 1; $v22108181761loop->revindex = $v22108181761loop->length; $v22108181761loop->revindex0 = $v22108181761loop->length - 1; ?><?php foreach ($v22108181761iterator as $account) { ?><?php $v22108181761loop->first = ($v22108181761incr == 0); $v22108181761loop->index = $v22108181761incr + 1; $v22108181761loop->index0 = $v22108181761incr; $v22108181761loop->revindex = $v22108181761loop->length - $v22108181761incr; $v22108181761loop->revindex0 = $v22108181761loop->length - ($v22108181761incr + 1); $v22108181761loop->last = ($v22108181761incr == ($v22108181761loop->length - 1)); ?><?php $v22108181761iterated = true; ?>
-        <?php if ($v22108181761loop->first) { ?>
+    <?php $v564032001iterated = false; ?><?php $v564032001iterator = $page->items; $v564032001incr = 0; $v564032001loop = new stdClass(); $v564032001loop->self = &$v564032001loop; $v564032001loop->length = count($v564032001iterator); $v564032001loop->index = 1; $v564032001loop->index0 = 1; $v564032001loop->revindex = $v564032001loop->length; $v564032001loop->revindex0 = $v564032001loop->length - 1; ?><?php foreach ($v564032001iterator as $account) { ?><?php $v564032001loop->first = ($v564032001incr == 0); $v564032001loop->index = $v564032001incr + 1; $v564032001loop->index0 = $v564032001incr; $v564032001loop->revindex = $v564032001loop->length - $v564032001incr; $v564032001loop->revindex0 = $v564032001loop->length - ($v564032001incr + 1); $v564032001loop->last = ($v564032001incr == ($v564032001loop->length - 1)); ?><?php $v564032001iterated = true; ?>
+        <?php if ($v564032001loop->first) { ?>
         <div class="table-responsive">
     <table class="table table-bordered table-striped" align="center">
         <thead>
@@ -46,16 +46,16 @@
                      <td><?= $account->Uptdate ?></td> 
                 
             </tr>
-        <?php if ($v22108181761loop->last) { ?>
+        <?php if ($v564032001loop->last) { ?>
         </tbody>
        <tbody>
             <tr>
                 <td colspan="7" align="right">
                     <div class="btn-group">
-                        <?= $this->tag->linkTo(['Accounts/GetUserAccounts', '<i class="icon-fast-backward"></i> First', 'class' => 'btn']) ?>
-                        <?= $this->tag->linkTo(['Accounts/GetUserAccounts?page=' . $page->before, '<i class="icon-step-backward"></i> Previous', 'class' => 'btn']) ?>
-                        <?= $this->tag->linkTo(['Accounts/GetUserAccounts?page=' . $page->next, '<i class="icon-step-forward"></i> Next', 'class' => 'btn']) ?>
-                        <?= $this->tag->linkTo(['Accounts/GetUserAccounts?page=' . $page->last, '<i class="icon-fast-forward"></i> Last', 'class' => 'btn']) ?>
+                        <?= $this->tag->linkTo(['accounts/getuseraccounts', '<i class="icon-fast-backward"></i> First', 'class' => 'btn']) ?>
+                        <?= $this->tag->linkTo(['accounts/getuseraccounts?page=' . $page->before, '<i class="icon-step-backward"></i> Previous', 'class' => 'btn']) ?>
+                        <?= $this->tag->linkTo(['accounts/getuseraccounts?page=' . $page->next, '<i class="icon-step-forward"></i> Next', 'class' => 'btn']) ?>
+                        <?= $this->tag->linkTo(['accounts/getuseraccounts?page=' . $page->last, '<i class="icon-fast-forward"></i> Last', 'class' => 'btn']) ?>
                         <span class="help-inline"><?= $page->current ?> of <?= $page->total_pages ?></span>
                     </div>
                 </td>
@@ -64,7 +64,7 @@
     </table>
     </div>
         <?php } ?>
-    <?php $v22108181761incr++; } if (!$v22108181761iterated) { ?>
+    <?php $v564032001incr++; } if (!$v564032001iterated) { ?>
         No Accounts are recorded
     <?php } ?>
 

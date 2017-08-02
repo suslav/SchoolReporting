@@ -60,7 +60,7 @@ class Elements extends Component
                      "users" => array(
                         'controller'=>'users',
                         'caption' => 'ChangePassword',
-                        'action' => 'ChangePassword'
+                        'action' => 'changepassword'
                     )
 
                 );
@@ -73,25 +73,25 @@ class Elements extends Component
                      $arrayOfLinks += array(                   
                     
 //                    ,                   
-                    "Accounts" => array(
-                        'controller'=>'Accounts',
+                    "accounts" => array(
+                        'controller'=>'accounts',
                         'caption' => 'Accounts',
-                        'action' => 'GetUserAccounts'
+                        'action' => 'getuseraccounts'
                     ),
-                         "Events" => array(
-                        'controller'=>'Events',
+                         "events" => array(
+                        'controller'=>'events',
                         'caption' => 'Events',
-                        'action' => 'GetUserEvents'
+                        'action' => 'getuserevents'
                     ),
-                        "Orders" => array(
-                        'controller'=>'Orders',
+                        "orders" => array(
+                        'controller'=>'orders',
                         'caption' => 'Orders',
-                        'action' => 'GetUserOrders'
+                        'action' => 'getuserorders'
                     ),
                        "users" => array(
                         'controller'=>'users',
                         'caption' => 'ChangePassword',
-                        'action' => 'ChangePassword'
+                        'action' => 'changepassword'
                     )
                 );
             }
